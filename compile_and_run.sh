@@ -3,12 +3,6 @@
 source=$1
 executable=$2
 
+gcc $source -o $executable 2>&1  && ./$executable
 
-if gcc $source -o $executable 
-then
-	chmod +x $executable
-	./$executable
-else
-	2>&1
-fi 
 
